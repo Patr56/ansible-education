@@ -1,0 +1,15 @@
+---
+# - name: Настроить nginx, указав в nginx.conf директорию /var/www в качестве root (модуль lineinfile).
+#   become: yes
+#   lineinfile:
+#       path: /etc/nginx/sites-available/default
+#       regexp: '^(.)root (.*);'
+#       backrefs: yes
+#       state: present
+#       line: '\1root /var/www;'
+- name: Настроить nginx, указав в nginx.conf директорию /var/www в качестве root (модуль lineinfile).
+  become: yes
+  lineinfile:
+      path: /etc/nginx/sites-available/default
+      regexp: '^.root /var/www/html;'
+      line: ' root /var/www/;'

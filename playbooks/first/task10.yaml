@@ -1,0 +1,4 @@
+---
+- name: Перезапустить nginx (модуль systemd).
+  become: yes
+  service: name=nginx state=restarted

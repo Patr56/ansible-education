@@ -1,0 +1,13 @@
+---
+- name: Установить unzip (модуль apt).
+  become: yes
+  apt:
+    name: unzip
+    state: present
+
+- name: Распаковать дистрибутив в директорию /var/www (модуль unarchive).
+  become: yes
+  ansible.builtin.unarchive:
+    src: /opt/distr/distribReactApp.zip
+    dest: /var/www
+    remote_src: yes

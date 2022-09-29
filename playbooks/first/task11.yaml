@@ -1,0 +1,10 @@
+---
+- name: Проверить работоспособность приложения, убедившись, что http://localhost возвращает код 200 и в title страницы строка "React App" (модуль uri).
+  become: yes
+  uri:
+    url: http://localhost
+    method: GET
+    status_code: 200
+    return_content: yes
+  register: this
+  failed_when: "'React App' not in this.content"

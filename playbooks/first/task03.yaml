@@ -1,0 +1,14 @@
+---
+
+- name: Создать группу www и пользователя www.
+  become: yes
+  group:
+    name: www
+    state: present
+
+- name: Добавить пользователя в группу (модуль group, user).
+  become: yes
+  user:
+    name: www
+    state: present
+    group: www
