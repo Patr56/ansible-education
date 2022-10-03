@@ -1,7 +1,9 @@
 ---
 - name: Создать архив с содержимым папки /var/www и скопировать его в /var/www_backup (модуль archive).
-  become: yes
+  become: true
   archive:
     path: /var/www
     dest: /var/www_backup/backup.zip
     format: zip
+  tags:
+  - config

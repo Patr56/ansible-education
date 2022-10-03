@@ -21,5 +21,10 @@ brew install ansible@2.9
 
 Запуск плейбука
 ```shell
-ansible-playbook -i inventory ./playbooks/playbook-first.yml -K
+ansible-playbook -i inventory ./playbook.yml -K
 ```
+Проверка сайта
+```shell
+ansible-playbook -i inventory ./playbook.yml -K --tags "check"
+```
+

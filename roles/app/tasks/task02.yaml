@@ -1,7 +1,9 @@
 ---
 
 - name: Установить nginx (модуль apt).
-  become: yes
+  become: true
   apt:
     name: nginx=1.18.0-6ubuntu14.2
     state: present
+  tags:
+  - install
