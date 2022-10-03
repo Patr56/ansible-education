@@ -5,3 +5,5 @@
     name: petya
     state: absent
     remove: yes
+  tags:
+    - config

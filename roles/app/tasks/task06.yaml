@@ -8,3 +8,5 @@
     owner: www
     group: www
   with_items: "{{ folders }}"
+  tags:
+  - config

@@ -4,9 +4,13 @@
   apt:
     name: unzip
     state: present
+  tags:
+  - install
 
 - name: Распаковать дистрибутив в директорию /var/www (модуль unarchive).
   become: true
   ansible.builtin.unarchive:
     src: distribReactApp.zip
     dest: /var/www
+  tags:
+  - config

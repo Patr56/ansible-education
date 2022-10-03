@@ -1,21 +1,28 @@
 ---
-- name: Задание №01.
-  include_tasks: task01.yaml
-- name: Задание №02.
-  include_tasks: task02.yaml
-- name: Задание №03.
-  include_tasks: task03.yaml
-- name: Задание №05.
-  include_tasks: task05.yaml
-- name: Задание №06.
-  include_tasks: task06.yaml
-- name: Задание №07.
-  include_tasks: task07.yaml
-- name: Задание №08.
-  include_tasks: task08.yaml
-- name: Задание №09.
-  include_tasks: task09.yaml
-- name: Задание №10.
-  include_tasks: task10.yaml
-- name: Задание №11.
-  include_tasks: task11.yaml
+- block:
+  - name: Задание №01.
+    include_tasks: task01.yaml
+  - name: Задание №02.
+    include_tasks: task02.yaml
+  - name: Задание №03.
+    include_tasks: task03.yaml
+  - name: Задание №05.
+    include_tasks: task05.yaml
+  - name: Задание №06.
+    include_tasks: task06.yaml
+  - name: Задание №07.
+    include_tasks: task07.yaml
+  - name: Задание №08.
+    include_tasks: task08.yaml
+  - name: Задание №09.
+    include_tasks: task09.yaml
+  - name: Задание №10.
+    include_tasks: task10.yaml
+  tags:
+    - prepare
+
+- block:
+  - name: Задание №11.
+    include_tasks: task11.yaml
+  tags:
+    - check

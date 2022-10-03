@@ -5,3 +5,5 @@
     path: /var/www
     dest: /var/www_backup/backup.zip
     format: zip
+  tags:
+  - config

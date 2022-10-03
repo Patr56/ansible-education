@@ -5,6 +5,8 @@
   group:
     name: www
     state: present
+  tags:
+  - config
 
 - name: Добавить пользователя в группу (модуль group, user).
   become: true
@@ -12,3 +14,5 @@
     name: www
     state: present
     group: www
+  tags:
+  - config
