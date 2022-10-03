@@ -1,4 +1,5 @@
 ---
+app_folder: /var/www/
 folders:
-  - /var/www
-  - /var/www_backup
+  - "{{ app_folder }}"
+  - /var/www_backup/

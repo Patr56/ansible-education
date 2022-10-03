@@ -1,7 +1,15 @@
 ---
-- name: Настроить nginx, указав в nginx.conf директорию /var/www в качестве root (модуль lineinfile).
+- name: Настроить nginx
   become: true
-  lineinfile:
-      path: /etc/nginx/sites-available/default
-      regexp: '^.root /var/www/html;'
-      line: ' root /var/www/;'
+  template:
+    src: nginx-app.conf.j2
+    dest: /etc/nginx/sites-available/default
+    owner: www
+    group: www
+    mode: "0644"
+# - name: Настроить nginx, указав в nginx.conf директорию /var/www в качестве root (модуль lineinfile).
+#   become: true
+#   lineinfile:
+#       path: /etc/nginx/sites-available/default
+#       regexp: '^.root /var/www/html;'
+#       line: ' root /var/www/;'
