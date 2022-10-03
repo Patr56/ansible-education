@@ -1,0 +1,10 @@
+---
+
+- name: Создать директории (если их нет) /var/www, назначить владельцем пользователя www и группу www (модуль file).
+  become: true
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: www
+    group: www
+  with_items: "{{ folders }}"

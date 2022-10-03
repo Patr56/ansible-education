@@ -1,5 +1,4 @@
 ---
-# ./roles/redis/tasks/setup-Debian.yml
 
 - name: Проверить, что пользователя petya не существует и удалить его, если существует (модуль user).
   user:

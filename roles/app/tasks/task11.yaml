@@ -1,6 +1,6 @@
 ---
 - name: Проверить работоспособность приложения, убедившись, что http://localhost возвращает код 200 и в title страницы строка "React App" (модуль uri).
-  become: yes
+  become: true
   uri:
     url: http://localhost
     method: GET
